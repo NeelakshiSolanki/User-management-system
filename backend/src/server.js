@@ -14,6 +14,10 @@ connectDB();
 // Middlewares
 app.use(cors());
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("User Management Backend API is running");
+});
+
 
 // Routes
 app.use("/api/auth", authRoutes);
